@@ -35,8 +35,14 @@ $usp_url = get_post_meta($post->ID, 'usp-url', true); if ($usp_url !=''):
 $usp_urlh = (!(substr($usp_url, 0, 7) == 'http://' || substr($usp_url, 0, 8) == 'https://')) ? 'http://'.$usp_url : $usp_url; ?>
     <p><i>Link:</i> <strong><a href="<?php echo $usp_urlh; ?>"><?php echo $usp_url; ?></a></strong></p>
 <?php endif;
-$usp_meta = usp_get_all_meta(false); foreach ($usp_meta as $key => $value) echo $key . ' => ' . $value . "\n";
-?>
+$usp_twitter_raw = get_post_meta($post->ID, 'usp-custom-twitter', true); if ($usp_twitter_raw !=''): 
+$usp_twitter = str_replace( 'https://twitter.com/', '', str_replace( 'http://twitter.com/', '', str_replace( '@', '', $usp_twitter_raw))) ?>
+    <p><i>Twitter:</i> <strong><a href="http://twitter.com/<?php echo $usp_twitter; ?>">@<?php echo $usp_twitter; ?></a></strong></p>
+<?php endif;?>
+$usp_instagram_raw = get_post_meta($post->ID, 'usp-custom-instagram', true); if ($usp_instagram_raw !=''): 
+$usp_instagram = str_replace( 'https://twitter.com/', '', str_replace( 'http://twitter.com/', '', str_replace( '@', '', $usp_instagram_raw))) ?>
+    <p><i>Instagram:</i> <strong><a href="http://instagram.com/<?php echo $usp_instagram; ?>">@<?php echo $usp_instagram; ?></a></strong></p>
+<?php endif;?>
 <p><i>About the photo and the film:</i></p>
 <?php the_content(); ?>
 <?php
