@@ -287,6 +287,42 @@ h3.sidetitle {
 .edit-link {
     margin:2em 0 0 1em;
 }
+/* user-submitted posts form */
+.usp-errors .usp-errors-heading {
+    font-size:120%;
+    margin-bottom:.15em;
+    color:rgba(235,17,17,1.0);
+}
+.usp-errors .usp-error {
+    color:rgba(235,17,17,1.0);
+}
+.usp-success {
+    font-size:120%;
+    color:rgba(17,235,17,1.0);
+}
+form.usp-form {
+    margin:2em 0;
+}
+form.usp-form fieldset {
+    border:none;
+    margin:.75em 0;
+}
+form.usp-form fieldset label.usp-label {
+    font-size:1.15em;
+    padding-bottom:.2em;
+}
+form.usp-form input,
+form.usp-form textarea {
+    color:rgba(0,0,0,0.95);
+    background-color:rgba(255,255,255,0.9);
+    padding:.35em;
+    font-size:1em;
+    font-family: 'Josefin Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+form.usp-form input[type="file"] {
+    color:rgba(255,255,255,0.9);
+    background:none;
+}
 @media (max-width:1279px) {
     .single-usp_form #content,
     .page #content {
