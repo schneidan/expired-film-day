@@ -34,7 +34,9 @@
 $usp_url = get_post_meta($post->ID, 'usp-url', true); if ($usp_url !=''): 
 $usp_urlh = (!(substr($usp_url, 0, 7) == 'http://' || substr($usp_url, 0, 8) == 'https://')) ? 'http://'.$usp_url : $usp_url; ?>
     <p><i>Link:</i> <strong><a href="<?php echo $usp_urlh; ?>"><?php echo $usp_url; ?></a></strong></p>
-<?php endif; ?>
+<?php endif;
+$usp_meta = usp_get_all_meta(false); foreach ($usp_meta as $key => $value) echo $key . ' => ' . $value . "\n";
+?>
 <p><i>About the photo and the film:</i></p>
 <?php the_content(); ?>
 <?php
