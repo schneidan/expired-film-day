@@ -15,7 +15,7 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 /*  Add your own functions below this line.
     ======================================== */
 
-function my_home_category( $query ) { if ( $query->is_home() && $query->is_main_query() ) { $query->set( 'cat', '2'); } } add_action( 'pre_get_posts', 'my_home_category' ); 
+function my_home_category( $query ) { if ( $query->is_home() && $query->is_main_query() ) { $query->set( 'cat', '4'); } } add_action( 'pre_get_posts', 'my_home_category' ); 
 
 function wpdocs_dequeue_script() {
    wp_dequeue_script( 'gridster-navigation' );
