@@ -229,6 +229,10 @@ h3.sidetitle {
     font-size: 1.25em;
     margin-bottom:1em;
 }
+#content twitterwidget {
+    margin-left: auto;
+    margin-right: auto;
+}
 #content dd li {
     font-size:1em;
 }
