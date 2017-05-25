@@ -45,6 +45,8 @@ p {
     background-color:#889289;
     color:#fff;
     width:20%;
+    margin-bottom:-50000px;
+    padding-bottom:50000px;
 }
 #main {
     width:75%;
