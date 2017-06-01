@@ -88,7 +88,7 @@ li a, p a, dd a, dt a, #content h3 a {
 li a:hover, p a:hover, dd a:hover, dt a:hover, #content h3 a:hover {
     border-bottom: 1px dashed #D7D9D7;
 }
-dd strong + a { font-weight:400; }
+dd strong + a, dd strong + a + a { font-weight:400; }
 .home .poste .postmeta a,
 .home .poste .postmeta a:visited {
     border-bottom:none;
